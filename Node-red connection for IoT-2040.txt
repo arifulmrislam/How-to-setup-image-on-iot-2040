@@ -1,0 +1,106 @@
+After image import full flow from computer.
+		
+		iot2000setup
+
+Uninstall node-red:
+	npm -g remove node-red
+	npm -g remove node-red-admin
+	rm -R ~/.node-red
+
+For Update node-red2040:
+	npm install -g --unsafe-perm node-red
+	npm install -g --unsafe -perm node-red@1.1.3
+	npm install -g node-red-dashboard
+	npm -g install node-red-contrib-modbus
+	npm install -g node-red-contrib-modbus
+	npm -g install node-pre-gyp
+	npm explore npm -g -- npm install node-gyp@latest
+
+	cd /usr/lib/node_modules
+	npm install node-red-contrib-modbus@3.6.1 --unsafe-perm --build-from-source
+
+	arch i586 12
+	arch quark 13
+	arch x86 14
+src iotdk-all http://iotdk.intel.com/repos/2.0/iotdk/all
+src iotdk-i586 http://iotdk.intel.com/repos/2.0/iotdk/i586
+src iotdk-quark http://iotdk.intel.com/repos/2.0/iotdk/quark
+src iotdk-x86 http://iotdk.intel.com/repos/2.0/iotdk/x86
+
+
+We want to download node on node-red dashboard,we will use always this instruction:
+	npm -g install xxxxx then the node is install in globally.
+
+Check always the date and time of IOT2000 and set it to actual date:
+	for setting the software time we can use the command:
+
+	date MMDDhhmmYYYY
+
+	to set the hardware time accorsing the softwear time use:
+
+	hwclock --systohc --utc
+
+For reboot:
+	
+	reboot
+
+How to setup image on iot-2040:
+	1.download the image from semense site,
+	https://support.industry.siemens.com/cs/document/109741799/simatic-iot2020-iot2040-sd-card-example-image?dti=0&lc=en-US
+	
+	2.Formate the sd card and download the image on sd card by balenaEtcher.
+
+	Update image version V2.6.1
+	
+	After image setup flow this link:https: //help.ubidots.com/en/articles/1785443-siemens-iot2040-setup-and-activation
+
+Start node red:
+	node /usr/lib/node/node-red/red
+	or
+	node /usr/lib/node_modules/node-red/red &
+
+For node-red open by putty we have to stop auto mode from setting.
+
+**For solve the node download problem,visit this site:
+
+	https://support.industry.siemens.com/tf/ww/en/posts/tip-installing-nodes-on-iot2000/180905/
+
+
+Important note:
+
+	1.If we update the new version of node-red on IoT-2040. It will be take new path whcih we have to fine out by "WinSCP" application.
+ 	Like our node-red path is this "node /usr/lib/node/node-red/red" but after update a new version it will be like
+ 	this "node /usr/lib/node_modules/node-red/red".
+ 	SO,we have to sure taht where we install our new version.
+
+For update the system:
+	sudo apt-get update -g
+	sudo apt-get upgrade -g
+
+	npm install npm@latest -g
+
+Image setup:
+	Which folder we installed the image it is very important.
+
+
+
+So first uninstall the node:
+rm -r -f node-red-contrib-modbus
+and after install it globally:
+npm install -g node-red-contrib-modbus
+
+
+convert node-
+
+let pay = msg.payload;
+const buf = Buffer.allocUnsafe(4); // (4) is ok
+buf.writeUInt16BE(pay[0]); // high byte
+msg.payload = buf.readFloatBE().toFixed(2);
+return msg;
+
+
+
+
+
+
+
