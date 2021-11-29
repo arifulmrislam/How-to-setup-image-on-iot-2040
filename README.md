@@ -4,17 +4,21 @@
 iot2000setup
 
 How to setup image on iot-2040:
+
 1.download the image from sameness site,
 
 	https://support.industry.siemens.com/cs/document/109741799/simatic-iot2020-iot2040-sd-card-example-image?dti=0&lc=en-US
 
 2.Formate the sd card and download the image on SD card by bleacher.
+
     Update image version V2.6.1
 
 After image setup flow this link: 
+
     HTTPs: //help.ubidots.com/en/articles/1785443-siemens-iot2040-setup-and-activation
 
 Start node red:
+
 	node /usr/lib/node/node-red/red
 	or
 	node /usr/lib/node_modules/node-red/red &
