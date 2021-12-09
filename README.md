@@ -37,6 +37,18 @@ but after update a new version it will be like this
     "node /usr/lib/node_modules/node-red/red".
 SO, we have to sure that where we install our new version.
 
+Screenshot,
+
+<img src= "Check version.png" width=800>
+
+<img src= "install node-red dashboard.png" width=800>
+
+<img src= "node-red packages.png" width=800>
+
+<img src= "node-red files.png" width=800>
+
+<img src= "start node red by command.png" width=800>
+
 
 
 ## Authors
